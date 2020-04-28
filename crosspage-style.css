@@ -1,0 +1,7 @@
+	.nav_effect {
+    box-shadow: 0 1px 0 rgba(124, 124, 124, 0.1);
+  }
+
+  #header_grid:before, #header_grid:after {content: none !important;}
+  .nav-dropdown .nav-link {border-top: 0px;}
+  .nav-bg-blur { -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);}
