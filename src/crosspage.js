@@ -1,5 +1,5 @@
 import "https://cdnjs.cloudflare.com/ajax/libs/attrchange/2.0.1/attrchange.min.js";
-$('head').append('<link rel="stylesheet" type="text/css" href="../css/crosspage-style.css">');
+$('head').append('<link rel="stylesheet" type="text/css" href="../crosspage-style.css">');
 
 	var sections_color;
   var locked = false;
