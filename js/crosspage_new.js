@@ -1,4 +1,3 @@
-import "https://cdnjs.cloudflare.com/ajax/libs/attrchange/2.0.1/attrchange.min.js";
 $('head').append('<link rel="stylesheet" type="text/css" href="../css/crosspage-style.css">');
 
 	var sections_color;
