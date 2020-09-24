@@ -1,7 +1,10 @@
-	.nav_effect {
-    box-shadow: 0 1px 0 rgba(124, 124, 124, 0.1);
-  }
+	.loader {display: block;}
+  .nav_effect {
+  	border-bottom: 1px solid rgba(124, 124, 124, 0.1);
+    /* box-shadow: 0 1px 0 rgba(124, 124, 124, 0.1); */
+  }
 
-  #header_grid:before, #header_grid:after {content: none !important;}
-  .nav-dropdown .nav-link {border-top: 0px;}
-  .nav-bg-blur { -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);}
+  #header_grid:before, #header_grid:after, .w-nav::before, .w-nav::after {display: none !important;}
+  /*.nav-link:first-of-type {border-top: 0px;}*/
+  .nav-dropdown .nav-link {border-top: 0px;}
+  .nav-bg-blur { -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);}
