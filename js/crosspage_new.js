@@ -76,19 +76,21 @@ $('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.jsdel
           header_el[0].style.backgroundColor = new_colourr;
 
           if (isNight(new_colourr)) {
-          	$('#nav_link_dropdown_container').addClass('night');
-      			$('#nav_link_dropdown_container2').addClass('night');
-            $('.nav-link').addClass('night');
-            $('.nav-logo').addClass('night');
-            $('.nav-logo-link').addClass('night');
-            $('.menu_button').addClass('night'); $('.nav-link-expandable').addClass('night');
+		$('.menu-divider').addClass('night');
+		$('#nav_link_dropdown_container').addClass('night');
+      		$('#nav_link_dropdown_container2').addClass('night');
+		$('.nav-link').addClass('night');
+		$('.nav-logo').addClass('night');
+		$('.nav-logo-link').addClass('night');
+		$('.menu_button').addClass('night'); $('.nav-link-expandable').addClass('night');
           } else {
-            $('#nav_link_dropdown_container').removeClass('night');
-      			$('#nav_link_dropdown_container2').removeClass('night');
-          	$('.nav-link').removeClass('night');
-            $('.nav-logo').removeClass('night');
-            $('.nav-logo-link').removeClass('night');
-            $('.menu_button').removeClass('night'); $('.nav-link-expandable').removeClass('night');
+		$('.menu-divider').removeClass('night');
+		$('#nav_link_dropdown_container').removeClass('night');
+		$('#nav_link_dropdown_container2').removeClass('night');
+		$('.nav-link').removeClass('night');
+		$('.nav-logo').removeClass('night');
+		$('.nav-logo-link').removeClass('night');
+		$('.menu_button').removeClass('night'); $('.nav-link-expandable').removeClass('night');
           }
           locked = false;
           break;
