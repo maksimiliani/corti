@@ -139,6 +139,9 @@ $('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.jsdel
           	document.getElementById("header_grid").style.backgroundColor = "white";
             $('.menu_button').removeClass('night');
             $('.nav-link').removeClass('night');
+						$('#nav_link_dropdown_container').removeClass('night');
+						$('#nav_link_dropdown_container2').removeClass('night');
+						$('#nav_link_dropdown_container3').removeClass('night');
             $('.nav-logo-link').removeClass('night'); $('.nav-link-expandable').removeClass('night');
           }
       }
