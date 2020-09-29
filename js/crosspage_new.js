@@ -9,9 +9,9 @@ $('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.jsdel
 	var m_mstyle = "none";
 
   function update_header(colourr) {
-  	
+
   	if ($('html, body').css("overflow") === 'hidden') return;
-    
+
     if (!header_shrinked && (window.scrollY > 119)) {
     	$('#header_grid').addClass('short');
       $('#submenu_social').addClass('short');
@@ -61,7 +61,7 @@ $('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.jsdel
 
 			header_el = $(".header-sticky");
       bodyRect = document.body.getBoundingClientRect();
-      
+
 			for (var i=0; i < sections_color.length; i++) {
         var offset1 = sections_color[i].getBoundingClientRect().top - bodyRect.top - header_el[0].offsetHeight;
         var offset2 = sections_color[i].getBoundingClientRect().top - bodyRect.top + sections_color[i].getBoundingClientRect().height - header_el[0].offsetHeight;
@@ -72,13 +72,14 @@ $('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.jsdel
           var new_colourr = getComputedStyle(sections_color[i], null).backgroundColor;
           if ((i == 0) && (colourr != null)) {
           	new_colourr = colourr;
-          } 
+          }
           header_el[0].style.backgroundColor = new_colourr;
 
           if (isNight(new_colourr)) {
 		$('.menu-divider').addClass('night');
 		$('#nav_link_dropdown_container').addClass('night');
-      		$('#nav_link_dropdown_container2').addClass('night');
+    $('#nav_link_dropdown_container2').addClass('night');
+		$('#nav_link_dropdown_container3').addClass('night');
 		$('.nav-link').addClass('night');
 		$('.nav-logo').addClass('night');
 		$('.nav-logo-link').addClass('night');
@@ -87,6 +88,7 @@ $('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.jsdel
 		$('.menu-divider').removeClass('night');
 		$('#nav_link_dropdown_container').removeClass('night');
 		$('#nav_link_dropdown_container2').removeClass('night');
+		$('#nav_link_dropdown_container3').removeClass('night');
 		$('.nav-link').removeClass('night');
 		$('.nav-logo').removeClass('night');
 		$('.nav-logo-link').removeClass('night');
@@ -99,7 +101,7 @@ $('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.jsdel
   }
 
   $(document).ready(function() {
-  
+
     sections_color = document.getElementsByClassName("section");
     update_header(null);
     $('.nav-link-dropdown-horizontal').attr('tabindex', '-1');
@@ -111,13 +113,13 @@ $('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.jsdel
         	$('.nav-link-dropdown-container-horizontal').css({'padding-top': "0px"});
         }
         update_header('#231E23');
-        
+
         if (!header_shrinked && (window.scrollY <= 119)) {
       		$('#nav').addClass('nav_effect');
         }
   		}, function(){
         update_header(null);
-        
+
         if (!header_shrinked && (window.scrollY <= 119)) {
       		$('#nav').removeClass('nav_effect');
         }
