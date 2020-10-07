@@ -112,7 +112,7 @@ $('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.jsdel
         } else {
         	$('.nav-link-dropdown-container-horizontal').css({'padding-top': "0px"});
         }
-        update_header('#231E23');
+        //update_header('#231E23');
 
         if (!header_shrinked && (window.scrollY <= 119)) {
       		$('#nav').addClass('nav_effect');
