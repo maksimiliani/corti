@@ -73,7 +73,7 @@ $('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.jsdel
           if ((i == 0) && (colourr != null)) {
           	new_colourr = colourr;
           }
-          header_el[0].style.backgroundColor = new_colourr;
+					if (header_shrinked) {header_el[0].style.backgroundColor = new_colourr;} else {header_el[0].style.background = "none";}
 
           if (isNight(new_colourr)) {
 		$('.menu-divider').addClass('night');
