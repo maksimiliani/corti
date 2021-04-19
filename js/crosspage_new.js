@@ -80,6 +80,7 @@ $('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.jsdel
 		$('#nav_link_dropdown_container').addClass('night');
     $('#nav_link_dropdown_container2').addClass('night');
 		$('#nav_link_dropdown_container3').addClass('night');
+		$('#nav_link_dropdown_container4').addClass('night');
 		$('.nav-link').addClass('night');
 		$('.nav-logo').addClass('night');
 		$('.nav-logo-link').addClass('night');
@@ -89,6 +90,7 @@ $('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.jsdel
 		$('#nav_link_dropdown_container').removeClass('night');
 		$('#nav_link_dropdown_container2').removeClass('night');
 		$('#nav_link_dropdown_container3').removeClass('night');
+		$('#nav_link_dropdown_container4').removeClass('night');
 		$('.nav-link').removeClass('night');
 		$('.nav-logo').removeClass('night');
 		$('.nav-logo-link').removeClass('night');
@@ -142,6 +144,7 @@ $('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.jsdel
 						$('#nav_link_dropdown_container').removeClass('night');
 						$('#nav_link_dropdown_container2').removeClass('night');
 						$('#nav_link_dropdown_container3').removeClass('night');
+						$('#nav_link_dropdown_container4').removeClass('night');
             $('.nav-logo-link').removeClass('night'); $('.nav-link-expandable').removeClass('night');
           }
       }
