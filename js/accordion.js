@@ -10,7 +10,7 @@ var accordion = (function(){
     speed: 400,
 
     // close all other accordion items if true
-    oneOpen: false,
+    oneOpen: true,
   };
 
   return {
