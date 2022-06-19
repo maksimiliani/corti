@@ -133,9 +133,6 @@ $(document).ready(function () {
 		setCookie("event_name", event_nm, 30);
 		setCookie("event_address", $('#event_address').val, 30);
 		setCookie("event_date", $('#event_date').val, 30);
-		result_ttl.innerHTML = result_ttl.val + ` <b>${getCookie("event_name")}</b>`;
-		$('#result_address').val(getCookie("event_address"));
-		$('#result_date').val(getCookie("event_date"));
 	}
 
 	const result_ttl = $('#result_title');
