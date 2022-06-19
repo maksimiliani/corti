@@ -137,7 +137,7 @@ $(document).ready(function () {
 
 	const result_ttl = $('#result_title')[0];
 	if (result_ttl) {
-		result_ttl.innerHTML = result_ttl.textContent + ` <b>${getCookie("event_name")}</b>`;
+		result_ttl.innerHTML = result_ttl.textContent + ` <strong>${getCookie("event_name")}</strong>`;
 		$('#result_address')[0].textContent = getCookie("event_address");
 		$('#result_date')[0].textContent = getCookie("event_date");
 	}
