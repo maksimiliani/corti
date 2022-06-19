@@ -127,12 +127,12 @@ function update_header(colourr) {
 
 $(document).ready(function () {
 
-	const event_nm = $('event_name');
+	const event_nm = $('#event_name')[0];
 	if (event_nm) {
-		$('#event_title').val(event_nm.val);
-		setCookie("event_name", event_nm, 30);
-		setCookie("event_address", $('#event_address').val, 30);
-		setCookie("event_date", $('#event_date').val, 30);
+		$('#event_title').val(event_nm.textContent);
+		setCookie("event_name", event_nm.textContent, 30);
+		setCookie("event_address", $('#event_address')[0].textContent, 30);
+		setCookie("event_date", $('#event_date')[0].textContent, 30);
 	}
 
 	const result_ttl = $('#result_title');
