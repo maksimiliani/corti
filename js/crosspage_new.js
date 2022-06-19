@@ -8,6 +8,29 @@ var header_el;
 var mobile_menu;
 var m_mstyle = "none";
 
+function setCookie(cname, cvalue, exdays) {
+	const d = new Date();
+	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+	let expires = "expires=" + d.toUTCString();
+	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+	let name = cname + "=";
+	let decodedCookie = decodeURIComponent(document.cookie);
+	let ca = decodedCookie.split(';');
+	for (let i = 0; i < ca.length; i++) {
+		let c = ca[i];
+		while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+		}
+	}
+	return "";
+}
+
 function update_header(colourr) {
 
 	if ($('html, body').css("overflow") === 'hidden') return;
@@ -104,8 +127,22 @@ function update_header(colourr) {
 
 $(document).ready(function () {
 
-	if ($('#event_name')) {
-		$('#event_title').val($('#event_name').val);
+	const event_nm = $('event_name');
+	if (event_nm) {
+		$('#event_title').val(event_nm.val);
+		setCookie("event_name", event_nm, 30);
+		setCookie("event_address", $('#event_address').val, 30);
+		setCookie("event_date", $('#event_date').val, 30);
+		result_ttl.innerHTML = result_ttl.val + ` <b>${getCookie("event_name")}</b>`;
+		$('#result_address').val(getCookie("event_address"));
+		$('#result_date').val(getCookie("event_date"));
+	}
+
+	const result_ttl = $('#result_title');
+	if (result_ttl) {
+		result_ttl.innerHTML = result_ttl.val + ` <b>${getCookie("event_name")}</b>`;
+		$('#result_address').val(getCookie("event_address"));
+		$('#result_date').val(getCookie("event_date"));
 	}
 
 	sections_color = document.getElementsByClassName("section");
