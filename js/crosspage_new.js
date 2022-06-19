@@ -135,11 +135,11 @@ $(document).ready(function () {
 		setCookie("event_date", $('#event_date')[0].textContent, 30);
 	}
 
-	const result_ttl = $('#result_title');
+	const result_ttl = $('#result_title')[0];
 	if (result_ttl) {
-		result_ttl.innerHTML = result_ttl.val + ` <b>${getCookie("event_name")}</b>`;
-		$('#result_address').val(getCookie("event_address"));
-		$('#result_date').val(getCookie("event_date"));
+		result_ttl.innerHTML = result_ttl.textContent + ` <b>${getCookie("event_name")}</b>`;
+		$('#result_address')[0].textContent = val(getCookie("event_address"));
+		$('#result_date')[0].textContent = val(getCookie("event_date"));
 	}
 
 	sections_color = document.getElementsByClassName("section");
