@@ -140,7 +140,7 @@ $(document).ready(function () {
 	}
 
 	const add_to_gmail_button = $('#add_to_gmail')[0];
-
+	const add_to_microsoft_button = $('#add_to_microsoft')[0];
 	if (add_to_gmail_button) {
 		let event_date = new Date(getCookie("event_date"));
 		let event_date_end = new Date(getCookie("event_date"));
@@ -148,9 +148,9 @@ $(document).ready(function () {
 		let event_loca = encodeURI(getCookie("event_address"));
 		let event_name = encodeURI(getCookie("event_name"));
 		add_to_gmail_button.setAttribute("href", `https://calendar.google.com/calendar/render?action=TEMPLATE&dates=${event_date.toISOString().replace(/[^a-zA-Z0-9]/g, '')}%2F${event_date_end.toISOString().replace(/[^a-zA-Z0-9]/g, '')}&details=https%3A%2F%2Fcorti.ai&location=${event_loca}&text=${event_name}`);
-	}
-	const add_to_microsoft_button = $('#add_to_microsoft')[0];
 
+		add_to_microsoft_button.setAttribute("href", `https://outlook.office.com/calendar/0/deeplink/compose?body=https%3A%2F%2Fcorti.ai&enddt=${event_date_end.toISOString()}&location=${event_loca}&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=${event_date.toISOString()}&subject=${event_name}`);
+	}
 
 	/* Setup for static pages
 	const event_nm = $('#event_name')[0];
