@@ -127,6 +127,19 @@ function update_header(colourr) {
 
 $(document).ready(function () {
 
+	const inputs_per_form = 4; //4 fields per form
+	const events_count = $('.input-field').length / inputs_per_form;
+
+	for (let i = 0; i < events_count; i++) {
+		$('.input-field')[i * 4].addEventListener('focus', event => {
+			document.getElementsByClassName('input-field hidden')[0].value = $('.event_title_code')[i].textContent;
+			setCookie("event_name", $('.event_title_code')[i].textContent, 30);
+			setCookie("event_address", $('.event_address')[i].textContent, 30);
+			setCookie("event_date", $('.event_date')[i].textContent, 30);
+		});
+	}
+
+	/* Setup for static pages
 	const event_nm = $('#event_name')[0];
 	if (event_nm) {
 		$('#event_title').val(event_nm.textContent);
@@ -140,7 +153,7 @@ $(document).ready(function () {
 		result_ttl.innerHTML = result_ttl.textContent + ` <strong>${getCookie("event_name")}</strong>`;
 		$('#result_address')[0].textContent = getCookie("event_address");
 		$('#result_date')[0].textContent = getCookie("event_date");
-	}
+	}*/
 
 	sections_color = document.getElementsByClassName("section");
 	update_header(null);
