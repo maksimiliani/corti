@@ -143,8 +143,8 @@ $(document).ready(function () {
 
 	if (add_to_gmail_button) {
 		let event_date = today = new Date(getCookie("event_date")).toISOString();
-		let event_loca = getCookie("event_address");
-		let event_name = getCookie("event_name");
+		let event_loca = encodeURI(getCookie("event_address"));
+		let event_name = encodeURI(getCookie("event_name"));
 		add_to_gmail_button.setAttribute("url", `https://calendar.google.com/calendar/render?action=TEMPLATE&dates=${event_date}&details=https%3A%2F%2Fcorti.ai&location=${event_loca}&text=${event_name}`);
 	}
 	const add_to_microsoft_button = $('#add_to_microsoft')[0];
