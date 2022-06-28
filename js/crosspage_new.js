@@ -139,6 +139,17 @@ $(document).ready(function () {
 		});
 	}
 
+	const add_to_gmail_button = $('#add_to_gmail')[0];
+
+	if (add_to_gmail_button) {
+		let event_date = getCookie("event_date").ToUniversalTime().ToString("u");;
+		let event_loca = getCookie("event_address");
+		let event_name = getCookie("event_name");
+		add_to_gmail_button.setAttribute("url", `https://calendar.google.com/calendar/render?action=TEMPLATE&dates=${event_date}&details=https%3A%2F%2Fcorti.ai&location=${event_loca}&text=${event_name}`);
+	}
+	const add_to_microsoft_button = $('#add_to_microsoft')[0];
+
+
 	/* Setup for static pages
 	const event_nm = $('#event_name')[0];
 	if (event_nm) {
