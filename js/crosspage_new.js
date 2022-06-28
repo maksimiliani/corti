@@ -143,13 +143,11 @@ $(document).ready(function () {
 
 	if (add_to_gmail_button) {
 		let event_date = new Date(getCookie("event_date"));
-		let event_date_end = event_date;
-		event_date_end.setHours(event_date.getHours() + 5);
-		event_date = event_date.toISOString();
-		event_date_end = event_date_end.toISOString();
+		let event_date_end = new Date(getCookie("event_date"));
+		event_date_end.setHours(event_date_end.getHours() + 5);
 		let event_loca = encodeURI(getCookie("event_address"));
 		let event_name = encodeURI(getCookie("event_name"));
-		add_to_gmail_button.setAttribute("href", `https://calendar.google.com/calendar/render?action=TEMPLATE&dates=${event_date}%2F${event_date_end}&details=https%3A%2F%2Fcorti.ai&location=${event_loca}&text=${event_name}`);
+		add_to_gmail_button.setAttribute("href", `https://calendar.google.com/calendar/render?action=TEMPLATE&dates=${event_date.toISOString()}%2F${event_date_end.toISOString()}&details=https%3A%2F%2Fcorti.ai&location=${event_loca}&text=${event_name}`);
 	}
 	const add_to_microsoft_button = $('#add_to_microsoft')[0];
 
