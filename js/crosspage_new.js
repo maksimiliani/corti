@@ -142,8 +142,9 @@ $(document).ready(function () {
 	const add_to_gmail_button = $('#add_to_gmail')[0];
 
 	if (add_to_gmail_button) {
-		let event_date = new Date(getCookie("event_date")).toISOString();
-		let event_date_end = event_date.setHours(event_date.getHours() + 5);
+		let event_date = new Date(getCookie("event_date"));
+		let event_date_end = event_date;
+		event_date_end.setHours(event_date.getHours() + 5);
 		event_date = event_date.toISOString();
 		event_date_end = event_date_end.toISOString();
 		let event_loca = encodeURI(getCookie("event_address"));
