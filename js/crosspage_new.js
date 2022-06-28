@@ -132,7 +132,7 @@ $(document).ready(function () {
 
 	for (let i = 0; i < events_count; i++) {
 		$('.input-field')[i * 4].addEventListener('focus', event => {
-			document.getElementsByClassName('input-field hidden')[0].value = $('.event_title_code')[i].textContent;
+			document.getElementsByClassName('input-field hidden')[i].value = $('.event_title_code')[i].textContent;
 			setCookie("event_name", $('.event_title_code')[i].textContent, 30);
 			setCookie("event_address", $('.event_address')[i].textContent, 30);
 			setCookie("event_date", $('.event_date')[i].textContent, 30);
