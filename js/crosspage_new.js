@@ -131,11 +131,13 @@ $(document).ready(function () {
 	const events_count = $('.input-field').length / inputs_per_form;
 
 	for (let i = 0; i < events_count; i++) {
-		$('.input-field')[i * 4].addEventListener('focus', event => {
-			document.getElementsByClassName('input-field hidden')[i].value = $('.event_title_code')[i].textContent;
+		$('.input-field')[i * inputs_per_form].addEventListener('focus', event => {
+			//document.getElementsByClassName('input-field hidden')[i].value = $('.event_restaurant')[i].textContent;
 			setCookie("event_name", $('.event_title_code')[i].textContent, 30);
 			setCookie("event_address", $('.event_address')[i].textContent, 30);
 			setCookie("event_date", $('.event_date')[i].textContent, 30);
+			setCookie("event_restaurant", $('.event_restaurant')[i].textContent, 30);
+			setCookie("event_phone", $('.event_phone')[i].textContent, 30);
 		});
 	}
 
@@ -147,7 +149,9 @@ $(document).ready(function () {
 		event_date_end.setHours(event_date_end.getHours() + 5);
 		let event_loca = encodeURI(getCookie("event_address"));
 		let event_name = encodeURI(getCookie("event_name"));
-		add_to_gmail_button.setAttribute("href", `https://calendar.google.com/calendar/render?action=TEMPLATE&dates=${event_date.toISOString().replace(/[^a-zA-Z0-9]/g, '')}%2F${event_date_end.toISOString().replace(/[^a-zA-Z0-9]/g, '')}&details=https%3A%2F%2Fcorti.ai&location=${event_loca}&text=${event_name}`);
+		let event_restaurant = encodeURI(getCookie("event_restaurant"));
+		let event_phone = encodeURI(getCookie("event_phone"));
+		add_to_gmail_button.setAttribute("href", `https://calendar.google.com/calendar/render?action=TEMPLATE&dates=${event_date.toISOString().replace(/[^a-zA-Z0-9]/g, '')}%2F${event_date_end.toISOString().replace(/[^a-zA-Z0-9]/g, '')}&details=${event_restaurant}%0A${event_loca}%0A${event_phone}%0A%0AI%27ll%20be%20joining%20a%20handful%20of%20my%20peers%20over%20a%20lunch%20and%20learn%20about%20how%20organizations%20like%20mine%20are%20addressing%20their%20most%20pressing%20telemedicine%20issues.%0A%0AQuestions%3F%20Reach%20Leo%20Lambert%2C%20Corti%2C%20at%20%3Ca%20href%3D%22mailto%3All%40corti.ai%22%3Ell%40corti.ai%3C%2Fa%3E&location=${event_loca}&text=${event_name}`);
 
 		add_to_microsoft_button.setAttribute("href", `https://outlook.office.com/calendar/0/deeplink/compose?body=https%3A%2F%2Fcorti.ai&enddt=${event_date_end.toISOString()}&location=${event_loca}&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=${event_date.toISOString()}&subject=${event_name}`);
 	}
