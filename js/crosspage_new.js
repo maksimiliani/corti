@@ -1,4 +1,4 @@
-$('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/maksimiliani/corti/css/crosspage-style.css">');
+$('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/maksimiliani/corti@57633ee/css/crosspage-style.css">');
 
 var sections_color;
 var locked = false;
