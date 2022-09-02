@@ -104,6 +104,7 @@ function update_header(colourr) {
 				$('#nav_link_dropdown_container2').addClass('night');
 				$('#nav_link_dropdown_container3').addClass('night');
 				$('#nav_link_dropdown_container4').addClass('night');
+				//$('#nav_link_dropdown_container_sub').addClass('night');
 				$('.nav-link').addClass('night');
 				$('.nav-logo').addClass('night');
 				$('.nav-logo-link').addClass('night');
@@ -115,6 +116,7 @@ function update_header(colourr) {
 				$('#nav_link_dropdown_container2').removeClass('night');
 				$('#nav_link_dropdown_container3').removeClass('night');
 				$('#nav_link_dropdown_container4').removeClass('night');
+				//$('#nav_link_dropdown_container_sub').removeClass('night');
 				$('.nav-link').removeClass('night');
 				$('.nav-logo').removeClass('night');
 				$('.nav-logo-link').removeClass('night');
