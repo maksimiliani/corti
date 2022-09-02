@@ -108,6 +108,7 @@ function update_header(colourr) {
 				$('.nav-logo').addClass('night');
 				$('.nav-logo-link').addClass('night');
 				$('.menu_button').addClass('night'); $('.nav-link-expandable').addClass('night');
+				$('.nav-logomark').addClass('night');
 			} else {
 				$('.menu-divider').removeClass('night');
 				$('#nav_link_dropdown_container').removeClass('night');
@@ -118,6 +119,7 @@ function update_header(colourr) {
 				$('.nav-logo').removeClass('night');
 				$('.nav-logo-link').removeClass('night');
 				$('.menu_button').removeClass('night'); $('.nav-link-expandable').removeClass('night');
+				$('.nav-logomark').removeClass('night');
 			}
 			locked = false;
 			break;
