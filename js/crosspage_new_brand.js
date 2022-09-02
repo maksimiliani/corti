@@ -103,14 +103,14 @@ function update_header(colourr) {
 				$('.nav-bar-container > .nav-link').addClass('night');
 				$('.nav-logo').addClass('night');
 				$('.nav-logo-link').addClass('night');
-				$('.menu_button').addClass('night'); $('.nav-bar-container > .nav-link-expandable').addClass('night');
+				$('.menu_button').addClass('night'); $('.nav-bar-container .nav-link-expandable').addClass('night');
 				$('.nav-logomark').addClass('night');
 			} else {
 				$('.menu-divider').removeClass('night');
 				$('.nav-bar-container > .nav-link').removeClass('night');
 				$('.nav-logo').removeClass('night');
 				$('.nav-logo-link').removeClass('night');
-				$('.menu_button').removeClass('night'); $('.nav-bar-container > .nav-link-expandable').removeClass('night');
+				$('.menu_button').removeClass('night'); $('.nav-bar-container .nav-link-expandable').removeClass('night');
 				$('.nav-logomark').removeClass('night');
 			}
 			locked = false;
